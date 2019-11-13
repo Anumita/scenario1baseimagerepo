@@ -1,0 +1,31 @@
+  
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: 
+ - master
+pr: none
+
+variables:
+  system.debug: 'true'
+
+stages:
+- stage: Build
+  displayName: Build base image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+     vmImage: 'ubuntu-latest'
+    steps:
+    - task: ACRTaskV0@0
+      displayName: 'baseimagetask'
+      inputs:
+        azureSubscription: 'anshenoDev'
+        azureContainerRegistry: 'anshenormdev'
+        repository: 'hello-world'
+        dockerfileOrTaskFile: 'Dockerfile'
+        tags: |
+          n1
