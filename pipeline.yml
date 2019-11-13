@@ -25,7 +25,7 @@ stages:
       inputs:
         azureSubscription: 'anshenoDev'
         azureContainerRegistry: 'anshenormdev'
-        repository: 'hello-world'
+        repository: 'nodebaseimage'
         dockerfileOrTaskFile: 'Dockerfile'
         tags: |
           n1
