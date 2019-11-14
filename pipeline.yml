@@ -25,7 +25,10 @@ stages:
       inputs:
         azureSubscription: 'anshenoDev'
         azureContainerRegistry: 'anshenormdev'
-        repository: 'nodebaseimage'
+        containerRepository: 'nodebaseimage'
+        gitHubConnection: 'Anumita'
+        repositoryName: 'Anumita/baseimagerepo'
+        branch: master
         dockerfileOrTaskFile: 'Dockerfile'
         tags: |
           n1
