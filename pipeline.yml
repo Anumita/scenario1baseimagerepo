@@ -5,7 +5,7 @@
 # https://aka.ms/yaml
 
 trigger: 
- - scenario1
+ - master
 pr: none
 
 variables:
@@ -21,14 +21,14 @@ stages:
      vmImage: 'ubuntu-latest'
     steps:
     - task: ACRTaskV0@0
-      displayName: 'baseimagetask'
+      displayName: 'scenario1baseimagetask'
       inputs:
         azureSubscription: 'anshenoDev'
         azureContainerRegistry: 'anshenormdev'
         containerRepository: 'scenario1nodebaseimage'
         gitHubConnection: 'github.com_Anumita'
         repositoryName: 'Anumita/baseimagerepo'
-        branch: scenario1
+        branch: master
         dockerfileOrTaskFile: 'Dockerfile'
         tags: |
           n1
