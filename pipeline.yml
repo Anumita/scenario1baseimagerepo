@@ -20,7 +20,7 @@ stages:
     pool:
      vmImage: 'ubuntu-latest'
     steps:
-    - task: ACRTaskV0@0
+    - task: ACRTaskV0@1
       displayName: 'scenario1baseimagetask'
       inputs:
         azureSubscription: 'anshenoDev'
