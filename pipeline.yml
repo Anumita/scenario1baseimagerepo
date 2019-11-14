@@ -5,7 +5,7 @@
 # https://aka.ms/yaml
 
 trigger: 
- - master
+ - scenario1
 pr: none
 
 variables:
@@ -25,10 +25,10 @@ stages:
       inputs:
         azureSubscription: 'anshenoDev'
         azureContainerRegistry: 'anshenormdev'
-        containerRepository: 'nodebaseimage'
+        containerRepository: 'scenario1nodebaseimage'
         gitHubConnection: 'github.com_Anumita'
         repositoryName: 'Anumita/baseimagerepo'
-        branch: master
+        branch: scenario1
         dockerfileOrTaskFile: 'Dockerfile'
         tags: |
           n1
