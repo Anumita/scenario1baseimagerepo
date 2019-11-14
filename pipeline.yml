@@ -27,7 +27,7 @@ stages:
         azureContainerRegistry: 'anshenormdev'
         containerRepository: 'scenario1nodebaseimage'
         gitHubConnection: 'github.com_Anumita'
-        repositoryName: 'Anumita/baseimagerepo'
+        repositoryName: 'Anumita/scenario1baseimagerepo'
         branch: master
         dockerfileOrTaskFile: 'Dockerfile'
         tags: |
